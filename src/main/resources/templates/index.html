@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.tiny.cloud/1/cyosdq7ivz0h2uicnhnkky2no8viq93lj7e370rc4w500rro/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- The script above *must* be listed first because it must be loaded first. -->
+    <!-- If it is not listed (and loaded) first, TinyMCE will not work. -->
+    <!-- Also: <hostname.tld> above *must* be replaced with the TinyMCE server’s FQDN. -->
+    <script src="https://cdn.tiny.cloud/1/cyosdq7ivz0h2uicnhnkky2no8viq93lj7e370rc4w500rro/tinymce/6/plugins.min.js" referrerpolicy="origin"></script>
+    <!-- This script provides access to tinyMCE’s premium plugins. -->
+</head>
+<body>
+  <form action="/blogs/store" method="POST">
+      <label for="title">Title</label>
+      <input type="text" name="title" id="title">
+      <label for="date">Date</label>
+      <input type="date" name="date" id="date">
+      <label for="content">Title</label>
+      <textarea name="content" id="content">
+      </textarea>
+      <input type="submit" name="submit" value="submit">
+  </form>
+</body>
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+    });
+  </script>
+</html>
